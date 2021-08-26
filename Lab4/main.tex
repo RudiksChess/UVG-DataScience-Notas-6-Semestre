@@ -1,0 +1,80 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+\textbf{Instrucciones:} en clase vimos un modelo simple para resolver regresiones lineales mediante redes neuronales.  Utilizado el código desarrollado (o si lo desea uno propio), responda a las siguientes preguntas:
+
+
+\begin{problema}
+	Cambie el número de observaciones a 100,000.  Explique que es lo que ocurre en términos de:
+	\begin{enumerate}
+		\item El tiempo de ejecución para resolver el problema.
+		\item El resultado final versus lo encontrado en clase:  es igual, o diferente...¿por qué?
+		\item Las graficas  para representar los datos/resultados.
+	\end{enumerate}
+\end{problema}
+
+\begin{problema}
+	Cambie el número de observaciones a 1,000,000.  Explique que es lo que ocurre en términos de:
+	\begin{enumerate}
+		\item El tiempo de ejecución para resolver el problema.
+		\item El resultado final versus lo encontrado en clase:  es igual, o diferente...¿por qué?
+		\item Las graficas  para representar los datos/resultados.
+	\end{enumerate}
+
+\end{problema}
+
+\begin{problema}
+	“Juegue” un poco con el valor de la tasa de aprendizaje, por ejemplo  0.0001, 0.001, 0.1, 1.  Para cada uno de estos indique:
+	\begin{enumerate}
+		\item ¿Qué ocurre con el tiempo de ejecución?
+		\item ¿Qué ocurre con la minimización de la pérdida?
+		\item ¿Qué ocurre con los pesos y los sesgos?
+		\item ¿Qué ocurre con las iteraciones?
+		\item ¿El problema queda resuelto o no?  
+		\item ¿Cuál es la apariencia de la última gráfica?  ¿Se cumple con la condición de que sea de 45 grados?
+	\end{enumerate}
+	
+\end{problema}
+
+\begin{problema}
+	Cambie la función de pérdida “L2-norm” a la misma pero sin dividir por 2.  Explique lo que ocurre en términos de:
+	\begin{enumerate}
+		\item El tiempo que se tarda el algoritmo en terminar, comparado a lo que vimos en clase.
+		\item Si la pérdida se minimiza igual que lo que vimos en clase.
+		\item Si los pesos y sesgos son parecidos a los vistos en clase.
+		\item Si el problema se resuelve como ocurrió en clase.
+		\item Si se obtiene un mejor resultado al hacer más iteraciones.
+	\end{enumerate}
+\end{problema}
+
+\begin{problema}
+	Cambie la función de pérdida de la “L2-norm” a la “L1-norm”.  Explique lo que ocurre en términos de:
+	
+	\begin{enumerate}
+		\item El tiempo que se tarda el algoritmo en terminar, comparado a lo que vimos en clase
+		\item Si la pérdida se minimiza igual que lo que vimos en clase
+		\item Si los pesos y sesgos son parecidos a los vistos en clase
+		\item Si el problema se resuelve como ocurrió en clase
+		 \item Si se obtiene un mejor resultado al hacer más iteraciones
+		 \item  ¿Tendrá una de estas más limitaciones que la otra? 
+	\end{enumerate}
+\end{problema}
+
+\begin{problema}
+	Cree una función $f(x,z) = 13 * xs + 7 * zs  - 12$. 
+	\begin{enumerate}
+		\item ¿Funciona el algoritmo de la misma forma?
+	\end{enumerate}
+	
+\end{problema}
+
+
+
+%---------------------------
+
+\end{document}
