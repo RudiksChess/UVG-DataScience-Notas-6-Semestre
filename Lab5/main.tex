@@ -1,0 +1,62 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+\textbf{Instrucciones: } en clase vimos un modelo simple de una red neuronal utilizando \textit{TensorFlow} 2. Utilizando el código desarrollado (o si lo desea uno propio pero que funcione correctamente), responda a las siguientes preguntas:
+
+\begin{problema}
+	Cambie el número de observaciones a 100,000. ¿Qué ocurre?
+\end{problema}
+\begin{sol}
+	Los resultados a simple vista parecen ser lo mismos; tales que 
+	\begin{enumerate}
+		\item La cantidad de observaciones hace que el modelo sea un poco más lento y mucho más tardado.
+		\item El error parece estabilizarse bastante más rápido y converge aproximadamente a un mismo número. 
+		\item Los pesos y sesgos no variaron en nada, se mantienen cercanos a las cifras esperadas. 
+		\item La gráfica del problema sigue la misma tendencia (solo que con más datos). 
+		\item Cabe recalcar que estamos en un caso de \textit{overfitting} ya que se usaron los mismos datos de entrenamiento. 
+		\item La gráfica: 
+		\begin{figure}[H]
+			\centering 
+			\includegraphics[scale=0.4]{Images/1}
+		\end{figure}
+	\end{enumerate}
+\end{sol}
+
+\begin{problema}
+	«Juegue» un poco con la tasa de aprendizaje. Los valores como 0.0001, 0.001, 0.1, 1 son interesantes para observar ¿Qué diferencias se observan? ¿Se comporta bien el algoritmo?
+\end{problema}
+\begin{sol} Tenemos los siguientes casos: 
+	\begin{enumerate}
+		\item[\textbf{0.0001}] (1) El algoritmo arroja pesos y sesgos bastante precisos. (2) El algoritmo tomó un poco más de tiempo en ejecutarse, comparado a la tasa de aprendizaje anterior. (3) La pérdida se estabilizó completamente en 0.3323. 
+		\item[\textbf{0.001}] (1) El algoritmo arroja pesos y sesgos bastante precisos (aunque por décimas impreciso a lo esperado). (2) El algoritmo fue un poco más eficiente en ejecutarse, comparado a la tasa de aprendizaje del inciso anterior. (3) La pérdida se estabilizó completamente en 0.3333. 
+		\item[\textbf{0.1}] El modelo explotó; la tasa de aprendizaje es muy grande.
+		\item[\textbf{1}]  El modelo explotó; la tasa de aprendizaje es muy grande.
+	\end{enumerate}
+\end{sol}
+\begin{problema}
+	Cambie la función de pérdida. Una función altenativa es la "Huber Loss". \bigbreak 
+La función de pérdida Huber es más adecuada que la L2.norm cuando tenemos valores atípicos, ya que es menos sensitiva a los mismos (en nuestro ejemplo no tenemos valores atípicos, pero seguramente se topará con ellos en el futuro). La L2-norm eleva todas las diferencias al cuadrado, por lo que los valores atípicos tienen mucha influencia sobre los resultados. La sintáxis correcta de la función de pérdida Huber es "huber\_loss".
+\bigbreak 
+	¿Cómo se comparan los resultados al cambiar la función de pérdida?
+\end{problema}
+\begin{sol}
+	Por los datos de entrenamiento «idealistas» que se usaron para hacer las predicciones, ya que fueron los mismos que para la construcción del modelo; se pensaría que no habría un efecto directo en los resultados. Sin embargo, con una tasa de aprendizaje de 0.02 se produce la siguiente gráfica, con los puntos más homogéneamente distribuidos: 
+	\begin{figure}[H]
+		\centering 
+		\includegraphics[scale=0.4]{Images/2}
+	\end{figure}
+	
+\end{sol}
+
+Referencia:
+https://www.tensorflow.org/versions/r1.15/api\_docs/python/tf/keras
+
+%---------------------------
+
+
+\end{document}
