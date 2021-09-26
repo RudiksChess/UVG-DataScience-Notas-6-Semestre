@@ -1,0 +1,67 @@
+\input{Configuraciones/paquetes}
+
+%--------------------------
+
+\begin{document}
+\input{Configuraciones/nombres}
+%--------------------------
+
+\textbf{Instrucciones:} 
+
+Para este ejercicio, trabajarán con 4 conjuntos de datos:
+\begin{enumerate}
+	\item daily-total-female-births.csv
+	\item shampoo.csv
+	\item monthly-car-sales.csv
+	\item monthly-mean-temp.csv
+\end{enumerate}
+Cada uno de estos conjuntos representan series de tiempo, pero muestran diferentes características relacionadas con la tendencias, estacionalidad, período, etc. (ver presentación de clase)
+
+Hemos visto 5 métodos diferentes para predecir con series de tiempo, a decir:  
+\begin{enumerate}
+	\item Promedio (para usar como base de referencia)
+	\item SARIMAX
+	\item Alisamiento exponencial (Winter-Holt)
+	\item Red Neuronal
+	\item FB Prophet
+\end{enumerate}
+
+En este laboratorio, deben ejecutar los 5 métodos para cada uno de los conjuntos de datos arriba indicados.
+
+%---------------------
+\begin{problema}
+	Utilizando la prueba del RMSE (raíz cuadrada de la media de los errores alcuadrado).  Generen gráficas para el caso que dió el mejor resultado de cada método en cada conjunto de datos.
+\end{problema}
+
+%----------------------
+\begin{problema}
+	¿Qué métodos logran captar mejor las tendencias y las variaciones estacionales?
+\end{problema}
+
+%----------------------
+\begin{problema}
+	Generen una tabla comparativa que muestre los RMSE más bajos para cada método con cada conjunto de datos. En la tabla indiquen qué método fue mejor para cada caso de datos.  Por ejemplo:
+	\begin{figure}
+		\centering
+		\includegraphics[scale=0.5]{Images/1}
+	\end{figure}
+\end{problema}
+
+%----------------------
+\begin{problema}
+	Ahora apliquen el FB Prophet con cada uno de los conjuntos de datos. Compare los resultados con los de los métodos anteriores.  ¿Hay algún ganador claro, entre todos los métodos?
+\end{problema}
+
+
+%----------------------
+\begin{problema}
+	 Escriban sus conclusiones sobre lo aprendido en este módulo sobre seriesde tiempo.  ¿Cuál es el mejor procedimiento para resolver un problema de predicción de series de tiempo?  
+\end{problema}
+
+
+
+%---------------------------
+\bibliographystyle{apa}
+\bibliography{referencias.bib}
+
+\end{document}
